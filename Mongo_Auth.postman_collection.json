@@ -1,0 +1,177 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Mongo_Auth",
+		"_postman_id": "b2b2f12e-4762-3e14-b557-6994028479eb",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"url": "http://localhost:8080/api/auth/signup",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"moderator\",\n\t\"email\": \"test@test.com\",\n\t\"password\": \"123456\",\n\t\"roles\":[\"user\",\"mod\"]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "MSRegister",
+			"request": {
+				"url": "http://localhost:8080/api/mstracker/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYwNDE5OTAxMywiZXhwIjoxNjA0Mjg1NDEzfQ.mUMnnYX58uh0PRhJwlbxKKNhmQ11inrPMHa8shKdBNLO_p8l087L_0HXtF1GcRGcb33FUjFPE1S9SR-pNFLfkw",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"msName\": \"ms_customer_security\",\n\t\"isProfReq\": \"Yes\",\n\t\"isPtRequired\": \"Yes\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"url": "http://localhost:8080/api/auth/signin",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"admin\",\n\t\"password\": \"123456\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ListUser",
+			"request": {
+				"url": "http://localhost:8080/api/test/user",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtb2RlcmF0b3IiLCJpYXQiOjE2MDQxMjMxOTksImV4cCI6MTYwNDIwOTU5OX0.qJrvogd72R6ZMW9R-tAyMYLeqwfea1ThqBHkxRR6XeV73ZaGkFuJLDW_eMIUC5YFTwVKPkZNdbQwQ9fH10zisQ",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"moderator\",\n\t\"email\": \"test@test.com\",\n\t\"password\": \"123456\",\n\t\"roles\":[\"user\",\"mod\"]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "searchMSTracker",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/api/mstracker/profrequired?msName=ms_authorization",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mstracker",
+						"profrequired"
+					],
+					"query": [
+						{
+							"key": "msName",
+							"value": "ms_authorization",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYwNDE5OTAxMywiZXhwIjoxNjA0Mjg1NDEzfQ.mUMnnYX58uh0PRhJwlbxKKNhmQ11inrPMHa8shKdBNLO_p8l087L_0HXtF1GcRGcb33FUjFPE1S9SR-pNFLfkw",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"moderator\",\n\t\"email\": \"test@test.com\",\n\t\"password\": \"123456\",\n\t\"roles\":[\"user\",\"mod\"]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ListMSTracker",
+			"request": {
+				"url": "http://localhost:8080/api/mstracker/mstracker",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYwNDE5OTAxMywiZXhwIjoxNjA0Mjg1NDEzfQ.mUMnnYX58uh0PRhJwlbxKKNhmQ11inrPMHa8shKdBNLO_p8l087L_0HXtF1GcRGcb33FUjFPE1S9SR-pNFLfkw",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"moderator\",\n\t\"email\": \"test@test.com\",\n\t\"password\": \"123456\",\n\t\"roles\":[\"user\",\"mod\"]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

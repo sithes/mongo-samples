@@ -1,0 +1,59 @@
+https://bezkoder.com/react-spring-boot-mongodb/
+https://www.c-sharpcorner.com/article/react-bootstrap-table-with-searching-and-custom-pagination/
+
+ms_tracker
+
+id
+msName
+ftStatus
+ftPercentage
+latestFTDate
+isProfReq
+profStatus
+latest_profiling_date
+bc_status
+bc_details
+latest_bc_date
+is_pt_required
+pt_status
+pt_details
+latest_pt_date
+gc_status
+gc_details
+latest_gc_date
+createdby
+createdOn
+modifiedBy
+modifiedOn
+
+
+
+Profiling Status
+----------------
+First Profiling in-Progress
+Second Profiling in-Progress
+Completed
+
+Testing Status
+Not Started
+In Progress
+Completed
+
+
+db.status.insertMany([
+   { name: "NOT_STARTED" },
+   { name: "IN_PROGRESS" },
+   { name: "COMPLETED" },
+])
+
+db.profStatus.insertMany([
+   { name: "NOT_INITIATED" },
+   { name: "FIRST_PROFILING_IN_PROGRESS" },
+   { name: "SECOND_PROFILING_IN_PROGRESS" },
+   { name: "COMPLETED" }
+])
+
+db.yesNo.insertMany([
+   { name: "YES" },
+   { name: "NO" }
+])
