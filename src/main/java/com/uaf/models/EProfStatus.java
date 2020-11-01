@@ -1,0 +1,8 @@
+package com.uaf.models;
+
+public enum EProfStatus {
+  NOT_INITIATED,
+  FIRST_PROFILING_IN_PROGRESS,
+  SECOND_PROFILING_IN_PROGRESS,
+  COMPLETED
+}
